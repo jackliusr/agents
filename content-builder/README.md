@@ -1,0 +1,1 @@
+uv add deepagents google-genai pillow pyyaml rich tavily-python langchain
