@@ -66,18 +66,38 @@ Then you should query the schema of the most relevant tables.
 )    
 
 from langchain.agents import create_agent
-
+from langchain.agents.middleware import HumanInTheLoopMiddleware 
+from langgraph.checkpoint.memory import InMemorySaver 
 
 agent = create_agent(
     model,
     tools,
     system_prompt=system_prompt,
+    middleware=[
+        HumanInTheLoopMiddleware(
+            interrupt_on={"sql_db_query": True},
+            description_prefix="Tool execution pending approval",
+        ),
+    ],
+    checkpointer=InMemorySaver(),
 )
 
 question = "Which genre on average has the longest tracks?"
+config = {"configurable": {"thread_id": "1"}}
+
+from langgraph.types import Command 
 
 for step in agent.stream(
-    {"messages": [{"role": "user", "content": question}]},
+    Command(resume={"decisions": [{"type": "approve"}]}),
+    config,
     stream_mode="values",
 ):
-    step["messages"][-1].pretty_print()
+    if "messages" in step:
+        step["messages"][-1].pretty_print()
+    if "__interrupt__" in step:
+        print("INTERRUPTED:")
+        interrupt = step["__interrupt__"][0]
+        for request in interrupt.value["action_requests"]:
+            print(request["description"])
+    else:
+        pass
