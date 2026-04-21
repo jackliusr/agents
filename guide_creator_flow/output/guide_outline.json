@@ -1,0 +1,28 @@
+{
+  "title": "CrewAI Unleashed: A Beginner\u2019s Step-by-Step Guide to Multi-Agent AI Workflows",
+  "introduction": "This section introduces the concept of multi-agent AI systems, explains what CrewAI is and why it simplifies orchestrating complex AI tasks, outlines who the guide is for, and sets clear learning objectives and a roadmap for the content ahead.",
+  "target_audience": "Beginner developers, AI enthusiasts, and automation builders with basic Python knowledge and no prior multi-agent framework experience.",
+  "sections": [
+    {
+      "title": "Section 1: Foundations - Understanding the CrewAI Architecture",
+      "description": "Explains the core building blocks of CrewAI: Agents (roles, goals, backstories), Tasks (descriptions, expected outputs), Crews (groupings and collaboration), and Processes (sequential vs. hierarchical execution). Includes a glossary of key terms and a comparison to traditional single-agent workflows."
+    },
+    {
+      "title": "Section 2: Getting Started - Environment Setup & First Run",
+      "description": "Walks beginners through prerequisites, Python virtual environment creation, installing CrewAI via pip, configuring LLM providers (OpenAI, Anthropic, or local models), and running a pre-built 'Hello World' example to verify the setup and understand basic execution flow."
+    },
+    {
+      "title": "Section 3: Building Your First Crew - From Design to Execution",
+      "description": "A step-by-step tutorial demonstrating how to define a custom crew. Covers Python/YAML configuration syntax, assigning distinct roles and goals to agents, selecting the right process type, wiring tasks together, and executing the workflow with mock data or real inputs."
+    },
+    {
+      "title": "Section 4: Enhancing Performance - Tools, Memory, and Error Handling",
+      "description": "Explores practical enhancements for real-world use cases. Covers integrating external APIs and custom tools, managing short-term vs long-term agent memory, refining prompts for better agent behavior, and implementing robust error handling, logging, and retry mechanisms."
+    },
+    {
+      "title": "Section 5: Deployment & Best Practices for Production Readiness",
+      "description": "Focuses on taking crews from prototype to production. Discusses environment variable security, debugging strategies, scaling multiple crews, performance optimization, and provides curated links to official documentation, community forums, and advanced learning paths."
+    }
+  ],
+  "conclusion": "Recaps the core principles of CrewAI, emphasizes the framework\u2019s flexibility and power for automating complex, multi-step tasks, encourages hands-on experimentation and iterative building, and provides actionable next steps for continued learning and community engagement."
+}
