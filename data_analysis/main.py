@@ -1,7 +1,8 @@
 from email.mime import message
 
 from daytona import Daytona
-from langchain_daytona import DaytonaSandbox 
+from langchain_daytona import DaytonaSandbox
+from deepagents.backends import LocalShellBackend
 import csv
 import io
 import os
@@ -17,7 +18,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 sandbox = Daytona().create();
-backend = DaytonaSandbox(sandbox=sandbox);
+# backend = DaytonaSandbox(sandbox=sandbox);
+backend = LocalShellBackend(root_dir=".", env={"PATH": "/usr/bin:/bin"})
 result = backend.execute("echo ready to analyze data")
 print(result)
 
@@ -40,19 +42,20 @@ csv_buffer.close()
 
 # Upload to backend
 
-backend.upload_files([( "/home/daytona/data/sales_data.csv", csv_bytes )])
-
+backend.upload_files([( "/home/jackl/data/sales_data.csv", csv_bytes )])
+print("uploaded sales data to backend")
 
 slack_token = os.environ["SLACK_USER_TOKEN"]
 slack_client = WebClient(token=slack_token)
-
+print("connected to Slack successfully")
 
 @tool(parse_docstring=True)
-def slack_send_message(text: str, file_path: str | None = None) -> str:
+def slack_send_message(text: str, channel: str, file_path: str | None = None) -> str:
     """Send message, optionally including attachments such as images.
 
     Args:
         text: (str) text content of the message
+        channel: (str) the Slack channel to send the message to
         file_path: (str) file path of attachment in the filesystem.
     """
     if not file_path:
@@ -60,7 +63,7 @@ def slack_send_message(text: str, file_path: str | None = None) -> str:
     else:
         fp = backend.download_files([file_path])
         slack_client.files_upload_v2(
-            channel="new-channel", # my own channel
+            channel="C0AUDTADJ7P", # my own channel
             content=fp[0].content,
             initial_comment=text,)
 
