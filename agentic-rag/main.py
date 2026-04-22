@@ -309,7 +309,7 @@ workflow.add_edge("rewrite_question", "generate_query_or_respond")
 # Compile
 graph = workflow.compile()
 
-graph.draw_mermaid_png(output_file_path="./graph.png")
+graph.get_graph().draw_mermaid_png(output_file_path="./graph.png")
 
 for chunk in graph.stream(
     {
