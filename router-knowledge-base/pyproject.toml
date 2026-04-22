@@ -1,0 +1,10 @@
+[project]
+name = "router-knowledge-base"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "langchain[ollama]>=1.2.15",
+    "langgraph>=1.1.9",
+]
