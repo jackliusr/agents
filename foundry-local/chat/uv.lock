@@ -90,6 +90,17 @@ wheels = [
 ]
 
 [[package]]
+name = "chat"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "foundry-local-sdk" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "foundry-local-sdk", specifier = ">=1.0.0" }]
+
+[[package]]
 name = "colorama"
 version = "0.4.6"
 source = { registry = "https://pypi.org/simple" }
@@ -143,17 +154,6 @@ dependencies = [
 wheels = [
     { url = "https://files.pythonhosted.org/packages/12/be/e5995a287517cb275e55a1a90535a59c77e4b15164b18c9c9a51db3fcedb/foundry_local_sdk-1.0.0-py3-none-any.whl", hash = "sha256:e770f941e761d22c5afa1c84c47d360e1c8d89d9d64abf3706d08291465f47d5", size = 36802, upload-time = "2026-04-09T20:08:37.92Z" },
 ]
-
-[[package]]
-name = "foundrylocalpipeline"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "foundry-local-sdk" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "foundry-local-sdk", specifier = ">=1.0.0" }]
 
 [[package]]
 name = "h11"

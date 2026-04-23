@@ -1,6 +1,5 @@
 from foundry_local_sdk import Configuration, FoundryLocalManager
 
-
 def main():
     # Initialize the Foundry Local SDK
     config = Configuration(app_name="foundry_local_samples")
