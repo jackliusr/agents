@@ -25,4 +25,4 @@ Ollama:qwen3.6:35b-a3b-q4_K_M is used in those projects. Other models and APIs a
 - [x] langgraph
 - [x] CrewAI
 - [x] google ADK
-- [ ] microsoft agent framework
+- [x] microsoft agent framework
