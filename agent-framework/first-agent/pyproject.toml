@@ -5,5 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "agent-framework-ollama>=1.0.0b260423",
+    "agent-framework>=1.2.0",
+    "asyncio>=4.0.0",
+    "dotenv>=0.9.9",
 ]
