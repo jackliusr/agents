@@ -11,7 +11,7 @@ Ollama:qwen3.6:35b-a3b-q4_K_M is used in those projects. Other models and APIs a
 - [x] skills
 - [x] tools
 - [x] deepagents
-- [ ] MCP
+- [x] MCP
 - [ ] A2A
 - [ ] Agent Protocol
 - [ ] A2UI
