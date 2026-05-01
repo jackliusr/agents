@@ -208,7 +208,7 @@ builder.add_conditional_edges(
 builder.add_edge("run_query", "generate_query")
 
 checkpointer = InMemorySaver()
-agent = builder.compile(checkpointer=checkpointer)
+agent = builder.compile()
 
 from langchain_core.runnables.graph import CurveStyle, MermaidDrawMethod, NodeStyles
 agent.get_graph().draw_mermaid_png(output_file_path="./graph.png")
