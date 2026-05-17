@@ -6,3 +6,5 @@ __pycache__
 langchain/latest_ai_flow/output/report.md
 graph.png
 .adk
+node_modules
+.genkit
