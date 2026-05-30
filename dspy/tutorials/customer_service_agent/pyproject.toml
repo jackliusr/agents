@@ -1,0 +1,13 @@
+[project]
+name = "customer-service-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "botocore>=1.43.18",
+    "dotenv>=0.9.9",
+    "dspy>=3.2.1",
+    "jupyter>=1.1.1",
+    "pydantic>=2.13.4",
+]

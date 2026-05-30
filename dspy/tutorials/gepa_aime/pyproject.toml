@@ -1,0 +1,12 @@
+[project]
+name = "gepa-aime"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "botocore>=1.43.18",
+    "datasets>=4.8.5",
+    "dspy>=3.2.1",
+    "jupyter>=1.1.1",
+]
