@@ -1,0 +1,66 @@
+{
+  "classifier": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Analyze the news article and classify it as a merger or acquisition deal.\n- A merger is when two companies combine to form a new entity.\n- An acquisition is when one company takes over another.\n- If it mentions a potential, rumored or failed deal, classify it as \"Other\".",
+      "fields": [
+        {
+          "prefix": "Text:",
+          "description": "${text}"
+        },
+        {
+          "prefix": "Article Type:",
+          "description": "${article_type}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "merger_extractor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Extract information about companies involved in a merger deal.\n- If the currency symbol is just \"$\", assume USD.",
+      "fields": [
+        {
+          "prefix": "Text:",
+          "description": "${text}"
+        },
+        {
+          "prefix": "Merger Info:",
+          "description": "${merger_info}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "acquisition_extractor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "You are an expert information extraction assistant. Extract the following details from acquisition deal articles:\n\n- parent_company: The acquiring company's name (string). If not present, use None.\n- parent_company_ticker: The parent company's ticker symbol(s) as a list of strings, each in the format 'EXCHANGE:SYMBOL' (e.g., 'TSX:TCP'). Include all mentioned exchanges. If none, use None.\n- child_company: The target/acquired company's name (string). If not present, use None.\n- child_company_ticker: The child company's ticker symbol(s) as a list of strings, same format as parent_company_ticker. If none, use None.\n- deal_amount: The transaction value as a string with the number and full wording (e.g., '4.2 billion', '500 million'). Do not include currency symbols or abbreviations like 'bn'. If not mentioned, use None.\n- deal_currency: The currency of the deal as a full uppercase code (e.g., 'USD', 'CAD', 'EUR'). If the article only shows '$' without other currency context, assume 'USD'. If no currency is indicated at all, use 'Unknown'. If multiple currencies but primary deal currency is clear, extract that; otherwise 'Unknown'.\n- article_type: Classify the article as 'acquisition' (default) if it describes an acquisition deal; otherwise specify the type.\n\nRules:\n- Ticker symbols must include the exchange prefix separated by a colon (e.g., 'NYSE-A:AZZ'). Use the exchange abbreviations as provided in the article.\n- Deal amount: Normalize the text to remove 'approximately', 'about' etc., but keep the number-word pairing (e.g., 'roughly 4.2 billion' → '4.2 billion'). Use 'billion' not 'B', 'bn', etc.\n- Currency: Only assume USD when the article uses '$' and there is no mention of another currency. Example: if the article says 'C$4.2 billion', currency is 'CAD', not 'USD'.\n- If any field is truly absent, output None for that field.\n\nExamples:\nArticle: 'Titanium Corp (TSX:TCP) acquires Azure Mining (TSX:AZM, NYSE-A:AZZ) for C$4.2 billion.'\nOutput:\n{\n  \"parent_company\": \"Titanium Corp\",\n  \"parent_company_ticker\": [\"TSX:TCP\"],\n  \"child_company\": \"Azure Mining\",\n  \"child_company_ticker\": [\"TSX:AZM\", \"NYSE-A:AZZ\"],\n  \"deal_amount\": \"4.2 billion\",\n  \"deal_currency\": \"CAD\",\n  \"article_type\": \"acquisition\"\n}\n\nArticle: 'Newmont to acquire Newcrest Mining Limited for $17.8 billion.' (No other currency info)\nOutput:\n{\n  \"parent_company\": \"Newmont\",\n  \"parent_company_ticker\": None,\n  \"child_company\": \"Newcrest Mining Limited\",\n  \"child_company_ticker\": None,\n  \"deal_amount\": \"17.8 billion\",\n  \"deal_currency\": \"USD\",\n  \"article_type\": \"acquisition\"\n}\n\nArticle: 'Rio Tinto buys Arcadium Lithium for 6.7 billion.' (No currency symbol or code)\nOutput:\n{\n  \"parent_company\": \"Rio Tinto\",\n  \"parent_company_ticker\": None,\n  \"child_company\": \"Arcadium Lithium\",\n  \"child_company_ticker\": None,\n  \"deal_amount\": \"6.7 billion\",\n  \"deal_currency\": \"Unknown\",\n  \"article_type\": \"acquisition\"\n}\n\nFollow these guidelines precisely.",
+      "fields": [
+        {
+          "prefix": "Text:",
+          "description": "${text}"
+        },
+        {
+          "prefix": "Acquisition Info:",
+          "description": "${acquisition_info}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.13",
+      "dspy": "3.0.4b1",
+      "cloudpickle": "3.1"
+    }
+  }
+}
