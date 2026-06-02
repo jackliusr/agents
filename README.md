@@ -18,6 +18,9 @@ Ollama:qwen3.6:35b-a3b-q4_K_M is used in those projects. Other models and APIs a
 
 ## Coding Agent as SDK for harness as services
 - [ ] claude code
+- [ ] opencode
+- [ ] codex
+- [ ] copilot
 
 ## Framework
 
@@ -27,3 +30,4 @@ Ollama:qwen3.6:35b-a3b-q4_K_M is used in those projects. Other models and APIs a
 - [x] google ADK
 - [x] genkit
 - [x] microsoft agent framework
+- [x] DSPy
