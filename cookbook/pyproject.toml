@@ -1,0 +1,12 @@
+[project]
+name = "cookbook"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "anthropic>=0.106.0",
+    "ipython>=9.14.1",
+    "marimo[recommended]>=0.23.9",
+    "numpy>=2.4.6",
+    "python-dotenv>=1.2.2",
+    "sentence-transformers>=5.5.1",
+]

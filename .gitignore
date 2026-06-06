@@ -8,3 +8,4 @@ graph.png
 .adk
 node_modules
 .genkit
+__marimo__/
