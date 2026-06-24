@@ -1,0 +1,11 @@
+/home/jackl/prjs/agents/AutoAgents/MyAgent/target/debug/deps/either-e36cc3482e322cf6.d: /home/jackl/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.16.0/src/lib.rs /home/jackl/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.16.0/src/serde_untagged.rs /home/jackl/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.16.0/src/serde_untagged_optional.rs /home/jackl/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.16.0/src/iterator.rs /home/jackl/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.16.0/src/into_either.rs
+
+/home/jackl/prjs/agents/AutoAgents/MyAgent/target/debug/deps/libeither-e36cc3482e322cf6.rlib: /home/jackl/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.16.0/src/lib.rs /home/jackl/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.16.0/src/serde_untagged.rs /home/jackl/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.16.0/src/serde_untagged_optional.rs /home/jackl/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.16.0/src/iterator.rs /home/jackl/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.16.0/src/into_either.rs
+
+/home/jackl/prjs/agents/AutoAgents/MyAgent/target/debug/deps/libeither-e36cc3482e322cf6.rmeta: /home/jackl/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.16.0/src/lib.rs /home/jackl/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.16.0/src/serde_untagged.rs /home/jackl/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.16.0/src/serde_untagged_optional.rs /home/jackl/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.16.0/src/iterator.rs /home/jackl/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.16.0/src/into_either.rs
+
+/home/jackl/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.16.0/src/lib.rs:
+/home/jackl/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.16.0/src/serde_untagged.rs:
+/home/jackl/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.16.0/src/serde_untagged_optional.rs:
+/home/jackl/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.16.0/src/iterator.rs:
+/home/jackl/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.16.0/src/into_either.rs:

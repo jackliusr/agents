@@ -1,0 +1,17 @@
+[package]
+name = "MyAgent"
+version = "0.1.0"
+edition = "2024"
+
+
+[dependencies]
+autoagents = "0.3.7"
+autoagents-core = "0.3.7"
+autoagents-llm = { version = "0.3.7", features = ["deepseek"] }
+autoagents-derive = "0.3.7"
+# Optional if you want ready-made tools
+autoagents-toolkit = { version = "0.3.7", features = ["filesystem", "search"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+anyhow = "1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
