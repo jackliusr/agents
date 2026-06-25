@@ -1,5 +1,6 @@
 .venv
 .env
+target/
 langchain/content-builder/blogs/
 .langgraph_api/
 __pycache__
