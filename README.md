@@ -32,3 +32,19 @@ Ollama:qwen3.6:35b-a3b-q4_K_M is used in those projects. Other models and APIs a
 - [x] microsoft agent framework
 - [x] DSPy
 - [ ] agentsea: not mature, it has dependency issue of orign, can't run  https://docs.hub.agentsea.ai/advanced_tutorial
+
+
+## Frameworks from china
+
+| Player | Core AI Product | Agent Framework(s) | Cloud Platform |
+|--------|----------------|-------------------|----------------|
+| Alibaba Group | Qwen (Tongyi Qianwen) | AgentFabric, Qwen-Agent, ModelScope Agents | Alibaba Cloud (Aliyun) |
+| Baidu | ERNIE Bot | AgentBuilder, Agents (Baidu) | Baidu AI Cloud |
+| ByteDance | Doubao | Coze | Volcano Engine |
+| Tencent | Hunyuan | Tencent Cloud AI Agent | Tencent Cloud |
+| Tsinghua University | GLM (via Zhipu AI) | MetaGPT, AgentBench, Owl | — |
+| Zhipu AI | GLM-4 | Agent development tools | Zhipu API |
+| Shanghai AI Lab | InternLM | XAgent | — |
+| DeepWisdom | — | MetaGPT | — |
+| LangGenius | — | Dify | — |
+| Labring | — | FastGPT | — |

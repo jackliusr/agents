@@ -10,3 +10,4 @@ graph.png
 node_modules
 .genkit
 __marimo__/
+.vscode/
