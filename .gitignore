@@ -13,3 +13,4 @@ __marimo__/
 .vscode/
 *.safetensors
 *.bin
+.deepeval
