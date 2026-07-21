@@ -205,6 +205,7 @@ Your role is to coordinate research by delegating tasks from your TODO list to s
 from datetime import datetime
 
 from deepagents import create_deep_agent
+from deepeval.integrations.langchain import CallbackHandler
 from langchain.chat_models import init_chat_model
 
 max_concurrent_research_units = 3
@@ -243,10 +244,22 @@ from langchain.messages import HumanMessage
 from langgraph.types import Overwrite
 
 if __name__ == "__main__":
+    # DeepEval tracing: the LangChain/LangGraph CallbackHandler turns every
+    # graph run, sub-agent, tool call, and LLM call into a span visible in
+    # Confident AI's Observatory. Set CONFIDENT_API_KEY (see env.example) to
+    # send traces; without it the app runs unchanged.
     for chunk in agent.stream(
         {
             "messages": [
                 HumanMessage(content="Compare Python vs JavaScript for web development")
+            ]
+        },
+        config={
+            "callbacks": [
+                CallbackHandler(
+                    name="deep-research-agent",
+                    tags=["deep-research", "langgraph"],
+                )
             ]
         },
         stream_mode="updates",
