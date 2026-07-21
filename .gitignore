@@ -14,3 +14,4 @@ __marimo__/
 *.safetensors
 *.bin
 .deepeval
+.env.local
