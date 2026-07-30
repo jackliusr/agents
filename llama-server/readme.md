@@ -1,4 +1,3 @@
-
 ```bash
 hf download hf://Qwen/Qwen3-Embedding-4B-GGUF/Qwen3-Embedding-4B-Q4_K_M.gguf
 
@@ -23,7 +22,7 @@ curl http://localhost:8081/v1/embeddings \
   -H "Content-Type: application/json" \
   -d '{
     "model": "Qwen3-Embedding-4B-Q4_K_M",
-    "input": ["Your text to embed"]
+    "input": ["The Labour Code requires 30 calendar days written notice."]
   }'
 ```
 
