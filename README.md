@@ -35,7 +35,12 @@ Ollama:qwen3.6:35b-a3b-q4_K_M is used in those projects. Other models and APIs a
 - [ ] fastgpt, javascript/typescript based, self-hosted or cloud
 - [ ] coze: model via its platform
 
-## 
+## Optimization
+
+- [ ] Quantization
+- [ ] Knowledge Distillation-- Large model --> Small model for a specific domain
+- [ ] Parallelism
+- [ ] Distributed Serving
 
 ## Frameworks from china
 
