@@ -1,0 +1,15 @@
+[project]
+name = "27-first-rag-pipeline"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "datasets>=2.6.1",
+    "dotenv>=0.9.9",
+    "haystack-ai>=3.0.0",
+    "mistral-haystack>=1.5.0",
+    "ollama-haystack>=6.8.0",
+    "sentence-transformers-haystack>=0.1.1",
+    "transformers-haystack>=0.2.0",
+]

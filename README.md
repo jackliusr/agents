@@ -42,6 +42,22 @@ Ollama:qwen3.6:35b-a3b-q4_K_M is used in those projects. Other models and APIs a
 - [ ] Parallelism
 - [ ] Distributed Serving
 
+## advanced RAG techniques
+- [ ] Query Transformation
+- [ ] Query Transformation (with Parallel/Fan-out Queries)
+- [ ] Reciprocal Rank Fusion (RRF)
+- [ ] Query Decomposition
+- [ ] HyDE
+- [ ] Text chunking
+- [ ] Reranking
+- [ ] Leveraging metadata
+- [ ] Hybrid search
+- [ ] Query rewriting
+- [ ] Autocut
+- [ ] Context distillation
+- [ ] Fine-tuning the large language model (LLM)
+- [ ] Fine-tuning the embedding models
+
 ## Frameworks from china
 
 | Player | Core AI Product | Agent Framework(s) | Cloud Platform |
