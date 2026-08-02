@@ -1,0 +1,14 @@
+[project]
+name = "43-building-a-tool-calling-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "docstring-parser>=0.18.0",
+    "dotenv>=0.9.9",
+    "haystack-ai>=3.0.0",
+    "ollama-haystack>=6.8.0",
+    "serperdev-haystack>=1.0.0",
+    "trafilatura>=2.2.0",
+]

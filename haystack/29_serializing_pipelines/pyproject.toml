@@ -1,0 +1,12 @@
+[project]
+name = "29-serializing-pipelines"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dotenv>=0.9.9",
+    "haystack-ai>=3.0.0",
+    "ollama-haystack>=6.8.0",
+    "transformers-haystack>=0.2.0",
+]
