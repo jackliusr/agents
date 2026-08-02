@@ -1,0 +1,11 @@
+[project]
+name = "36-building-fallbacks-with-conditional-routing"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dotenv>=0.9.9",
+    "ollama-haystack>=6.8.0",
+    "serperdev-haystack>=1.0.0",
+]
