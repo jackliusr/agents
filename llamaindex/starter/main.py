@@ -24,6 +24,7 @@ index = VectorStoreIndex.from_documents(
     # embed_model=Settings.embed_model,
 )
 
+
 query_engine = index.as_query_engine(
     # we can optionally override the llm here
     # llm=Settings.llm,
