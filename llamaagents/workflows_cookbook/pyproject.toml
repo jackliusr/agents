@@ -1,0 +1,13 @@
+[project]
+name = "workflows-cookbook"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dotenv>=0.9.9",
+    "llama-index-core>=0.14.23",
+    "llama-index-llms-ollama>=0.10.1",
+    "llama-index-llms-openai>=0.7.10",
+    "llama-index-utils-workflow>=0.11.0",
+]

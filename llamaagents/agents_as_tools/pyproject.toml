@@ -1,0 +1,12 @@
+[project]
+name = "agents-as-tools"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dotenv>=0.9.9",
+    "llama-index>=0.14.23",
+    "llama-index-llms-ollama>=0.10.1",
+    "tavily-python>=0.7.27",
+]
