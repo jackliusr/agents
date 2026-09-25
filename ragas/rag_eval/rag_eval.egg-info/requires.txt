@@ -1,0 +1,7 @@
+ragas[all,examples]>=0.3.0
+openai>=1.0.0
+langchain-community<0.4
+ragas-examples>=0.4.3
+
+[dev]
+pytest>=7.0
